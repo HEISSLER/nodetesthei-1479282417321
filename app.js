@@ -27,10 +27,14 @@ app.get(express.static(__dirname + '/public'));
 var appEnv = cfenv.getAppEnv();
 
 // start server on the specified port and binding host
+//app.listen(appEnv.port, '0.0.0.0', function() {
+//  var port = server.address().port;
+//  console.log('Example app listening at port %s', port);
+  // print a message when the server starts listening
+//  console.log("server starting on " + appEnv.url);
+//});
+//module.exports = server;
 app.listen(appEnv.port, '0.0.0.0', function() {
-  var port = server.address().port;
-  console.log('Example app listening at port %s', port);
   // print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
 });
-module.exports = server;

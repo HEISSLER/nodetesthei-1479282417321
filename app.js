@@ -1,4 +1,4 @@
-/*eslint-env node*/
+/*eslint-env nodeheidi*/
 
 //------------------------------------------------------------------------------
 // node.js starter application for Bluemix

@@ -26,19 +26,12 @@ app.get(express.static(__dirname + '/public'));
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-//var server = app.listen(3000, function () {
-//  var port = server.address().port;
-//  console.log('Example app listening at port %s', port);
-//});
-//module.exports = server;
+var server = app.listen(3000, function () {
+ var port = server.address().port;
+  console.log('Example app listening at port %s', port);
+});
+module.exports = server;
 // start server on the specified port and binding host
-//app.listen(appEnv.port, '0.0.0.0', function() {
-//  var port = server.address().port;
-//  console.log('Example app listening at port %s', port);
-  // print a message when the server starts listening
-//  console.log("server starting on " + appEnv.url);
-//});
-//module.exports = server;
 app.listen(appEnv.port, '0.0.0.0', function() {
   // print a message when the server starts listening
   console.log("server starting on " + appEnv.url);

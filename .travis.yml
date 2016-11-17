@@ -5,5 +5,5 @@ env:
 - MY_VAR=EverythignIsAwesome
 - NODE_ENV=TEST
 after_script:
-#- npm run-script coverage
+- npm run-script jshint
 #- npm run-script coveralls

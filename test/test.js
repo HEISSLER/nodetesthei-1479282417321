@@ -7,7 +7,13 @@ var app = require('../app');
 
 describe("Hello World", function() {
   describe("GET /", function() {
-
+    it("renders successfully", function(done) {
+      request(app).get('/').expect(200, done);
+    });
+    
+    it("hello", function(done) {
+    request(app).get('/').expect("hello world", done);
+    });
 
 //    it("returns status code 200", function(done) {
 //      request.get(base_url, function(error, response, body) {
@@ -24,9 +30,6 @@ describe("Hello World", function() {
 //        done();
 //      });
 //    });
-
-    it("renders successfully", function(done) {
-    request(app).get('/').expect(200, done);
-  })
+    
   });
 });

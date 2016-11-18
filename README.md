@@ -12,3 +12,5 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application base
 6. Access the running app in a browser at http://localhost:6001
 
 [Install Node.js]: https://nodejs.org/en/download/
+
+[![Coverage Status](https://coveralls.io/repos/github/HEISSLER/nodetesthei-1479282417321/badge.png)](https://coveralls.io/github/HEISSLER/nodetesthei-1479282417321)

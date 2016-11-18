@@ -5,14 +5,17 @@
     "scripts": {
     "start": "node app.js",
     "test": "mocha",
-    "jshint": "./node_modules/jshint/bin/jshint app.js"
+    "jshint": "./node_modules/jshint/bin/jshint app.js",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha"
   },
   "dependencies": {
     "cfenv": "1.0.x",
     "express": "4.13.x",
     "request": "^2.78.0",
     "supertest": "latest",
-    "jshint": "latest"
+    "jshint": "latest",
+    "istanbul": "latest",
+    "coveralls": "2.11.2"
   },
   "repository": {},
   "engines": {

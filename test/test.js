@@ -1,6 +1,6 @@
 var request = require('supertest');
 var assert = require('assert');
-//helloWorld = require("../app.js"),
+//heidihelloWorld = require("../app.js"),
 //base_url = "http://localhost:6001/";
 var app = require('../app');
 

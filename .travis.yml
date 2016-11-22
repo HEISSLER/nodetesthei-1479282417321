@@ -4,7 +4,9 @@ node_js:
 env:
 - MY_VAR=EverythignIsAwesome
 - NODE_ENV=TEST
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
 after_script:
 - npm run-script jshint
 - npm run-script coverage
-#- npm run-script coveralls

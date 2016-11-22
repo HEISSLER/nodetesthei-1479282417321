@@ -1,7 +1,7 @@
 var request = require('supertest');
 var assert = require('assert');
 //helloWorld = require("../app.js"),
-base_url = "http://localhost:6001/";
+//base_url = "http://localhost:6001/";
 var app = require('../app');
 
 
@@ -17,7 +17,7 @@ describe("Hello World", function() {
 
     //    it("returns status code 200", function(done) {
     //      request.get(base_url, function(error, response, body) {
-    //        //expect(response.statusCode).toBe(200);
+            //expect(response.statusCode).toBe(200);
     //        assert.equal(200, response.statusCode);
     //        done();
     //      });
@@ -30,6 +30,6 @@ describe("Hello World", function() {
     //        done();
     //      });
     //    });
-        
+
   });
 });

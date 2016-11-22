@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
 
 app.get('/hello', function (req, res) {
   res.send('hello hello')
-
+})
 
 app.get(express.static(__dirname + '/public'));
 

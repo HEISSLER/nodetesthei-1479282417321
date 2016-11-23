@@ -11,3 +11,4 @@ after_script:
 - npm run-script jshint
 after_success:
 - npm run-script coverage
+- ./travis.sh

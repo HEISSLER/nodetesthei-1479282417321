@@ -19,8 +19,7 @@ after_success:
 - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script jshint    ; fi
 - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage    ; fi
    
-- npm run-script jshint
-- npm run-script coveralls
+cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 #- bash travis.sh 
 
 

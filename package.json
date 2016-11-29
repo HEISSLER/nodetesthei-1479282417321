@@ -6,8 +6,7 @@
     "start": "node app.js",
     "test": "mocha",
     "jshint": "./node_modules/jshint/bin/jshint app.js",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha && cat ./coverage/lcov.info"
-     // | ./node_modules/coveralls/bin/coveralls.js  && rm -rf ./coverage"   
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha && cat ./coverage/lcov.info"      
   },
   "dependencies": {
     "cfenv": "1.0.x",

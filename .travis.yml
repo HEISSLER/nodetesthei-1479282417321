@@ -19,4 +19,4 @@ after_success:
 - test $TRAVIS_TEST_RESULT = 0 \ 
   && npm run-script jshint \
   && npm run-script coverage \
-  && bash travis.sh
+- bash travis.sh

@@ -10,14 +10,13 @@ env:
   # matrix variables will create a new build for each specified variable
   matrix:
     - DB=production
-    - DB=testing
 
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
 after_success:
-- test $TRAVIS_TEST_RESULT = 0 
+- test $TRAVIS_TEST_RESULT = true 
   && npm run-script jshint
   && npm run-script coverage
   && bash travis.sh

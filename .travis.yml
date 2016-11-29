@@ -8,11 +8,8 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 after_success:
 - npm run-script jshint
-export TRAVIS_TEST_RESULT=$?
-echo "Done. Build script exited with $TRAVIS_TEST_RESULT" 
-- npm run-script coverage
-export TRAVIS_TEST_RESULT=$?
-echo "Done. Build script exited with $TRAVIS_TEST_RESULT" 
-- bash travis.sh
-export TRAVIS_TEST_RESULT=$?
-echo "Done. Build script exited with $TRAVIS_TEST_RESULT" 
+on:
+    condition: 
+      - $TRAVIS_TEST_RESULT == 0
+      - npm run-script coverage
+      - bash travis.sh

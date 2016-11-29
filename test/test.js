@@ -12,7 +12,7 @@ describe("Hello World", function() {
     });
 
     it("hello", function(done) {
-    request(app).get('/').expect("hello world", done);
+    request(app).get('/').expect("hoho", done);
     });
 
     //    it("returns status code 200", function(done) {

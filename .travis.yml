@@ -18,5 +18,7 @@ before_script:
 after_success:
 - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script jshint    ; fi
 - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage    ; fi
- 
-- bash travis.sh
+
+$TESTVAR = npm run-script jshint
+if [[ "$TESTVAR" == "0" ]]; then bash travis.sh; fi 
+#- bash travis.sh

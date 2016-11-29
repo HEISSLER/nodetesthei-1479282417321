@@ -7,9 +7,7 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 after_success:
-- npm run-script jshint
-on:
-    condition: 
-      - $TRAVIS_TEST_RESULT == 0
-      - npm run-script coverage
-      - bash travis.sh
+- echo "test_result: $TRAVIS_TEST_RESULT"
+- test $TRAVIS_TEST_RESULT = true && npm run-script jshint
+- npm run-script coverage
+- bash travis.sh

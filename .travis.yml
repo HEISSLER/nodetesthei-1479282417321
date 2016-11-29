@@ -16,10 +16,10 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 after_success:
-- test $TRAVIS_TEST_RESULT = 0 \ 
+- test $TRAVIS_TEST_RESULT = 1 \ 
   && npm run-script jshint 
   
-- test $TRAVIS_TEST_RESULT = 0 \   
+- test $TRAVIS_TEST_RESULT = 1 \   
   && npm run-script coverage 
   
 - bash travis.sh

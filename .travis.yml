@@ -20,6 +20,7 @@ after_success:
 - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage    ; fi
    
 - npm run-script jshint
+- npm run-script coveralls
 #- bash travis.sh 
 
 

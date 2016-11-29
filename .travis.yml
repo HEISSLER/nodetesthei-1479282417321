@@ -16,6 +16,9 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 after_success:
+- if [[ "$TRAVIS_TEST_RESULT" == "1" ]]; then npm run-script jshint    ; fi
+- if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage    ; fi
+
 - test $TRAVIS_TEST_RESULT = 1 \ 
   && npm run-script jshint 
   

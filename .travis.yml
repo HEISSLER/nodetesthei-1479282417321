@@ -17,7 +17,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 after_success:
-- test $TRAVIS_TEST_RESULT = 0 \# check build success 
+- test $TRAVIS_TEST_RESULT = 0 
   && npm run-script jshint
   && npm run-script coverage
   && bash travis.sh

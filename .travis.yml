@@ -22,5 +22,4 @@ after_success:
 - npm run-script jshint
 #- bash travis.sh 
 
-on:
-    condition: "$TRAVIS_TEST_RESULT" == "1"
+

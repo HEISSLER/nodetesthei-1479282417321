@@ -15,7 +15,8 @@
     "supertest": "latest",
     "jshint": "latest",
     "istanbul": "latest",
-    "coveralls": "2.11.2",
+    "coveralls": "latest",
+    "coveralls mocha-lcov-reporter": "latest";
     "karma": "latest"
   },
   "repository": {},

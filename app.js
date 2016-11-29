@@ -18,12 +18,12 @@ var app = express();
 // serve the files out of ./public as our main files
 //app.use(express.static(__dirname + '/public'));
 app.get('/', function (req, res) {
-  res.send('hello world')
-})
+  res.send('hello world');
+});
 
 app.get('/hello', function (req, res) {
-  res.send('hello hello')
-})
+  res.send('hello hello');
+});
 
 app.get(express.static(__dirname + '/public'));
 

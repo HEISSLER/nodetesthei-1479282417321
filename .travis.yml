@@ -17,6 +17,9 @@ before_script:
 
 after_success:
 - test $TRAVIS_TEST_RESULT = 0 \ 
-  && npm run-script jshint \
-  && npm run-script coverage \
+  && npm run-script jshint 
+  
+- test $TRAVIS_TEST_RESULT = 0 \   
+  && npm run-script coverage 
+  
 - bash travis.sh

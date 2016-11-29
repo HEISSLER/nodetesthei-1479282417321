@@ -20,8 +20,7 @@ after_success:
 - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage    ; fi
    
 - npm run-script jshint
-- bash travis.sh 
+#- bash travis.sh 
 
 on:
-    condition: "$TRAVIS_TEST_RESULT = 1"
-#- bash travis.sh
+    condition: "$TRAVIS_TEST_RESULT" == "1"

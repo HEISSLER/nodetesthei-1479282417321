@@ -20,6 +20,8 @@ after_success:
    - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script jshint    ; fi
   #- if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage    ; fi
 
-after_script: NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage && ./travis.sh 
+after_script: NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+
+- bash ./travis.sh 
 
 

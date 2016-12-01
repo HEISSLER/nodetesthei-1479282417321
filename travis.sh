@@ -1,8 +1,12 @@
+
 body='{
 "request": {
   "branch":"master"
 }}'
 
+
+if (env_test == 1)
+{
 curl -s -X POST \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
@@ -10,6 +14,4 @@ curl -s -X POST \
   -H "Authorization: token w5eY_hNqr1LKXqOCT_W2uA" \
   -d "$body" \
   https://api.travis-ci.org/repo/HEISSLER%2Fnodetravis/requests
-
-if (env_test == 0) 
-     env_test = 1;
+}

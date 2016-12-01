@@ -1,5 +1,5 @@
 
-if [env_test == 1]
+if [$env_test == 1]
 then 
 
 body='{

@@ -7,15 +7,12 @@ env:
   - secure: WNAZv7LXmJfx1rKwUDanBoXKHmqIOuOwonHWKFud63t+my4Fx/OaRlSQjNiqwryheOc2WUj6cGs3w92hcSYNJaxH6o69e2FjHEd3ovz2R5EotE1JA7R7ZUclkYMkA/rDGc0wcFolA5cSZgriNv+PC4UbLlvS1D/NqY+PPg2DoLKp5sbn6ymWVTCywTmHYl2EKCOttJIfKMylnd5CAKrqKslpYfjlL04wCVL7oOlzZZEIZLWkm3OvNkdm6NWSL6qn7d0KRHomdXr3v446P3vTqnBrh0ivf0nTeKdvleR83VFqPPQyTF/tvMlCNUjfuuPk82CNif0u5qgtw1xY3pz2QSQ6wQyHVhCbDkcBUKkc3qIiVSljsau37pYVwOVZp592F6dlDJ3tupH7DKEiYs9dWrpliDo4tZdh/HVhpuR9beH+QkirXJUqRhUS9zCNIkhCkGq4J9NcCMHBv3tW2SjE1V5o8pvGHKmH5wLYfH7AnUfy4mXKA/b38c0RXvwPbx8kHdZ5HmqSEdMVrTZh6m9V3NzPKYTZWtKjTWE2yZ8uUYBW0ewqXfZO5QtuZgzEeO4rGNa4M19LOZT3OJoKtwomwL6JI4JddhdI1v24m/1FhGkueeo/K+OTQTbIIyKRPgp9Nh6vqQtWhHr0b5T7n5JtB+0xQS2xaDjoMVnlr7TvN6k=
   matrix:
   - DB=production
-  - secure: Q8T4ggC8z2wEm/2zfmoQb/fllm4xvgPh+Ao/IMSIbDq4mUJt5ZFI2z6jm7taYwo70cqzBcLGbw8lrlCu72L5A+oiOAK+bTgnMv6BlcydhjeZBPdC6Evd2Nbjod0G821DRVuFUBbk6j3sycqum6flMkiTbDUUlTD8rkP4LBEvNaaekhcywxa6/Ejh0v8LfuDNdQgIcATodv4kCF9f81ZydQzuCL4ITNt54zjOQAtCLm3iludoizEy260JEMX7J7aRdLcLgWLgE4xG3bJrl645ynrRRvwnGJlSGEB+RMscbO8MFpfLOz6hqQsskNgqRQE40YwgfVO6gZsGr797M9T1f8jIhID+5zcmPrg9Un3RCPHHyetqo5r6OXbcJCVrWti+Xl53b0pcc2u7rvjqkY+s2IkVCVyw6NyrlgjDYD3OzITG5WmXGJNJcGUKIr+ymGfd1oGxBCFDHYXbSAop6MMwmOm0Zqg6Am9cDj2yIFEC/zsGBD6r8gN4So5L4sApPDSU3Xl2s2YJs4aHwTocoPkotRLMfRskuzuGUofgsLoSN2Sv5Olii5194zSKQiZht8JgB3EzWPyZiHe+AK0f4SMBxSajeOgM63okzCWEcARr9OlKh1RB7NxjIha0ge+2m7O6eWWFUs1YD5vCmybumOw1c1+aiz6OpxYk4Tm6jfxvHh4=
-  - secure: ktF8PoZ3QsfZxIQlJbBdnBbzofUOB/bZYbTOC/8BpY14rsXb1dWKeC5QD1xu+yJ+OMyedtC8DvJ1TPCcr3VjvEP/FZztBtF0SLG6wk6IUIoqm0QyFTZ9XO1NcW+NsFvVj2yHgthNEqUTn4cckVxyZbn8UVq7E2SVerhLr0PIoOvMkWe4rFWma+Cbt9USf/7T8Wbqs67FLAX+q4ucpjQWLTObL+0YHv88EOie72A0sY8ZCGnI4CtOyA3bpjS07BP6cmTECIsOKTUPtjcLOdgJYjnSmBDQ1ZMuGWhtnatRIq7MMWCy9Xlwm53PH5oqvqLc9hXvuPwwKGg5wXK/PzjCZl8w8w2eblHZW81tPllJYyDMeERnBo47X5CP/jy78ikXCCqE9OKOAYLvcv0mZoRBkEOlS+CSdFmKXo03Oe+9xoBXDwCa/l2rgqxGgBo6SG622Qcn18+K/Ujw2O25yRTX/uUxtyZfhwnW646UCN9ek8JEMuhs0FBSpX5qDEL104P7WxQfdvySgkmtdxU0G4FilKpevF91iD0wIP+qVKwSAO8IAELfdM7CqXSjqf6HBVXvvXzIOIwOZ96kdhOPVi3lfOnDdPmwjg5iMiRFl5UPQdIQeDu0cdu6JOEP/yCSfIjQCDIe4RElsm41ZVR/xOZnw4DwwTLgew8dDXATN2gPimU=
-before_script:
+before_script:  
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 after_success:
-- if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script jshint    ; fi
-- if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage    ; fi
+- if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script jshint ; fi
+- if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage ; fi
 after_script:
 - bash ./travis.sh
 - echo $env_test
-- echo 'ready?'

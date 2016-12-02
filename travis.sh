@@ -5,7 +5,7 @@ body='{
 }}'
 
 
-env_test=1
+echo $env_test
 
 if [ $env_test -eq 1 ]
 then

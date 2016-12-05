@@ -3,7 +3,6 @@ body='{
 "request": {
   "branch":"master"
 }}'
-
 echo $env_test
 
 if [ $env_test -eq 1 ]

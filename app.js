@@ -21,11 +21,13 @@ app.get('/', function (req, res) {
   res.send('hello world');
 });
 
-console.time('hello');
+
 app.get('/hello', function (req, res) {
-  res.send('hello and morning!');
+  console.time('hello');
+  res.send('hello tooo this morning!');
+  console.timeEnd('hello');
 });
-console.timeEnd('hello');
+
 
 app.get(express.static(__dirname + '/public'));
 

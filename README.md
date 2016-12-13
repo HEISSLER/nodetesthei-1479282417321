@@ -18,4 +18,4 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application base
 
 ## next issue
 
-##Next Travis Rocks - testnextnext Tuesdaynextexttttt tuppi!!!!!!!!!!!!!!!!!!!!!!!!!!
+##Next Travis Rocks - test!!!!!!!!!!!!!!!!!!!!!!!!!!

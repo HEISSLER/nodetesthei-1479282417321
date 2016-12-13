@@ -7,6 +7,10 @@
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
+var responseTime = require('response-time');
+var StatsD = require('node-statsd');
+//var StatsD = require('node-statsd'),
+//client = new StatsD();
 
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
@@ -15,10 +19,22 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
+var stats = new StatsD();
+
+stats.socket.on('error', function (error) {
+  console.error(error.stack);
+});
+
+app.use(responseTime(function (req, res, time) {
+	  var stat = (req.method + req.url).toLowerCase()
+	    .replace(/[:\.]/g, '')
+	    .replace(/\//g, '_')
+	  stats.timing(stat, time)
+	}))
 // serve the files out of ./public as our main files
 //app.use(express.static(__dirname + '/public'));
 app.get('/', function (req, res) {
-  res.send('hello world');
+  res.send('hello world');  
 });
 
 

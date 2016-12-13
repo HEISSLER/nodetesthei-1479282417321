@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "cfenv": "1.0.x",
+    "response-time": "latest",
     "express": "4.13.x",
     "request": "^2.78.0",
     "supertest": "latest",

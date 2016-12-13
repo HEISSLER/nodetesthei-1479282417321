@@ -15,7 +15,4 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application base
 [Install Node.js]: https://nodejs.org/en/download/
 
 ## next  issue3
-
-## next issue
-
-##Next Travis Rocks - test!!!!!!!!!!!!!!!!!!!!!!!!!!
+##Next Travis Rocks!!!!!!!!!!!!!!!!!!!!!!!!!!

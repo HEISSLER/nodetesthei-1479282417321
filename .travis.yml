@@ -8,6 +8,9 @@ env:
   matrix:
   - DB=production
 
+branches:
+  except:
+  - master
 
 before_script:  
 - export DISPLAY=:99.0

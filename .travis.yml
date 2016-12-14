@@ -8,9 +8,6 @@ env:
   matrix:
   - DB=production
 
-branches:
-  except:
-  - master
 
 before_script:  
 - export DISPLAY=:99.0
@@ -21,3 +18,10 @@ after_success:
 after_script:
 - bash ./travis.sh
 - echo $env_test
+
+notifications:
+  email:
+    recipients:
+      - h.eissler@de.ibm.com     
+    on_success: always
+    on_failure: always

@@ -9,14 +9,14 @@ env:
   - DB=production
 
 
-before_script:  
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
+#before_script:  
+#- export DISPLAY=:99.0
+#- sh -e /etc/init.d/xvfb start
 after_success:
 - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script jshint ; fi
 - if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage ; fi
 after_script:
-- bash ./travis.sh
+#- bash ./travis.sh
 - echo $env_test
 
 notifications:

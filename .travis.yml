@@ -1,22 +1,12 @@
 language: node_js
 node_js:
 - 6
-env:
-  global:
-  - SECRET_TOKEN=k399dkkgklsk
-  - secure: WNAZv7LXmJfx1rKwUDanBoXKHmqIOuOwonHWKFud63t+my4Fx/OaRlSQjNiqwryheOc2WUj6cGs3w92hcSYNJaxH6o69e2FjHEd3ovz2R5EotE1JA7R7ZUclkYMkA/rDGc0wcFolA5cSZgriNv+PC4UbLlvS1D/NqY+PPg2DoLKp5sbn6ymWVTCywTmHYl2EKCOttJIfKMylnd5CAKrqKslpYfjlL04wCVL7oOlzZZEIZLWkm3OvNkdm6NWSL6qn7d0KRHomdXr3v446P3vTqnBrh0ivf0nTeKdvleR83VFqPPQyTF/tvMlCNUjfuuPk82CNif0u5qgtw1xY3pz2QSQ6wQyHVhCbDkcBUKkc3qIiVSljsau37pYVwOVZp592F6dlDJ3tupH7DKEiYs9dWrpliDo4tZdh/HVhpuR9beH+QkirXJUqRhUS9zCNIkhCkGq4J9NcCMHBv3tW2SjE1V5o8pvGHKmH5wLYfH7AnUfy4mXKA/b38c0RXvwPbx8kHdZ5HmqSEdMVrTZh6m9V3NzPKYTZWtKjTWE2yZ8uUYBW0ewqXfZO5QtuZgzEeO4rGNa4M19LOZT3OJoKtwomwL6JI4JddhdI1v24m/1FhGkueeo/K+OTQTbIIyKRPgp9Nh6vqQtWhHr0b5T7n5JtB+0xQS2xaDjoMVnlr7TvN6k=
-  matrix:
-  - DB=production
-
 
 #before_script:  
 #- export DISPLAY=:99.0
 #- sh -e /etc/init.d/xvfb start
-after_success:
-- if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script jshint ; fi
-- if [[ "$TRAVIS_TEST_RESULT" == "0" ]]; then npm run-script coverage ; fi
+
 after_script:
-#- bash ./travis.sh
 - echo $env_test
 
 notifications:
